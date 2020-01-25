@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: site.lang }}'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{% if page.title %}{{page.title}} · {% endif %}{{site.title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+      html,body{
+        height: 100%;
+        margin: 0;
+      }
+      body{
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: blue;
+      }
+      a{
+        text-decoration: underline;
+        color: blue;
+      }
+      a.active{
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+      }
+      .text-normalize{
+        font-size: inherit;
+      }
+      .content{
+        min-height: 100%;
+      }
+      .content > .content-inside{
+        padding: 0px;
+        padding-bottom: 200px;
+      }
+      .footer {
+        height: 200px;
+        margin-top: -200px;
+      }
+      .card-columns{
+        column-count: 2;
+      }
+      .card{
+        border-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-inside">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4">
+              <!-- menu -->
+              {% include navigation.html %}
+            </div>
+            <div class="col-8">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- eof fluid container -->
+      {% include footer.html %}
+
+  </body>
+</html>
