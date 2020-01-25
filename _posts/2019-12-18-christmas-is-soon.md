@@ -1,5 +1,5 @@
 ---
-tilte: yel
+title: yel
 
 tags:
   - media
