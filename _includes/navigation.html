@@ -1,0 +1,39 @@
+<aside class="p-4">
+  <h1 class="px-3 pt-4 text-normalize">{{ site.title }}</h1>
+  <!-- current pag aliases -->
+  {% assign aliases = site.pages|where:"ref",page.ref %}
+  <!-- pages -->
+  <ul class="nav flex-column mt-4">
+    {% for ref in site.data.navigation.pages %}
+      {% assign nav_item = site.pages|where:"ref",ref|where:"lang":page.lang|first %}
+      <li class='nav-item'>
+        {% if page.ref == nav_item.ref %}
+          {% assign is_active = true %}
+        {% else %}
+          {% assign is_active = false %}
+        {% endif %}
+        <a class="nav-link d-inline-block {% if is_active %} active {% endif %}" href="{{ nav_item.url }}">
+          {{ nav_item.title }}
+           <!-- ({{ nav_item.ref }}-{{page.ref}}-{{is_active}}) -->
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- languages -->
+  <ul class="nav mt-4">
+    {% for language in site.languages %}
+      <li class='nav-item'>
+        {% if page.lang == language %}
+          {% assign is_active = true %}
+        {% else %}
+          {% assign is_active = false %}
+        {% endif %}
+        {% assign alias = aliases|where:"lang",language|first %}
+        <a class="nav-link {% if is_active %} active {% endif %}" href="{{ alias.permalink }}">
+          {% assign key=language %}
+          {% include t.html %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
