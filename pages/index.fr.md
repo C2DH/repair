@@ -7,3 +7,5 @@ title: accueil
 ---
 
 Page here
+
+<!-- more -->
