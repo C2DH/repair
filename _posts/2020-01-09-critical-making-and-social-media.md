@@ -2,6 +2,11 @@
 authors:
   - M Ratto
   - M Boler
+category:
+  - diy
+cover:
+  src: "https://live.staticflickr.com/8756/28275126114_bce038f423.jpg"
+  caption: "CC by [NDB Photos](https://www.flickr.com/photos/142305740@N05/), Flickr"
 title: "DIY citizenship: Critical making and social media"
 type: book
 year: 2014

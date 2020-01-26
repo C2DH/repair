@@ -2,6 +2,8 @@
 authors:
   - M Watson
   - E Shove
+category:
+  - repair
 journal: Journal of Consumer Culture
 title: "Product, competence, project and practice: DIY and the dynamics of craft consumption"
 type: article
