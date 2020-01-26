@@ -14,14 +14,17 @@
       }
       body{
         font-family: 'IBM Plex Sans', sans-serif;
-        color: blue;
+        color: black;
       }
       a{
         text-decoration: underline;
-        color: blue;
+        color: black;
       }
-      a.active{
-        background-color: blue;
+      a.nav-link{
+        white-space: nowrap;
+      }
+      a.nav-link.active{
+        background-color: black;
         color: white;
         text-decoration: none;
       }
@@ -45,20 +48,54 @@
       .card{
         border-color: transparent;
       }
+      .card .card-body{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .card > img {
+        -webkit-filter: url(#monochrome);
+        filter:  url(#monochrome);
+      }
+      aside{
+        min-width: 200px;
+      }
+      code{
+        color: blue;
+      }
+      .defs-only{
+        display: none;
+      }
     </style>
   </head>
 
   <body>
+    <svg class="defs-only">
+      <filter id="monochrome" color-interpolation-filters="sRGB"
+              x="0" y="0" height="100%" width="100%">
+        <feColorMatrix type="matrix"
+        values="0.90 0 0 0   0.40
+          0.95 0 0 0  -0.10
+         -0.20 0 0 0   0.65
+            0  0 0 1   0" />
+      </filter>
+    </svg>
+    {% if page.ref == 'index' %}
+    <img src="assets/repair_b.svg" style='max-height:70%'/>
+    {% endif %}
+
     <div class="content">
       <div class="content-inside">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
-            <div class="col-4">
+            <div class="d-flex">
               <!-- menu -->
+              <div class="flex-grow-1">
+
               {% include navigation.html %}
-            </div>
-            <div class="col-8">
+              </div>
+              <div>
               {{ content }}
+              </div>
             </div>
           </div>
         </div>
