@@ -21,4 +21,4 @@ languages:
   - en
   - fr
   - de
-permalink: /repair/:year/:month/:day/:title:output_ext
+permalink: ":year/:month/:day/:title:output_ext"
