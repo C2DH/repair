@@ -4,7 +4,7 @@
   <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
   {% endif %}
   <div class="card-body">
-    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+    <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
     <p class="card-text">{{ post.excerpt }}</p>
 
     <p class="card-text"><small class="text-muted">{{ post.date }}</small></p>
