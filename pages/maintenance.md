@@ -3,12 +3,10 @@ lang: en
 layout: category
 ref: maintenance
 permalink: /maintenance
-title: "Maitenance"
+title: Maintenance
 ---
 
 
-blablalb
+Maintenance
 
 <!-- more -->
-
-rerererer
