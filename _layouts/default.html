@@ -64,6 +64,42 @@
       .defs-only{
         display: none;
       }
+      #repair-this {
+        position: fixed;
+        z-index:100;
+        top:0;
+        bottom: 10%;
+        overflow: hidden;
+        left:0;
+        right: 0;
+        background: gold;
+      }
+      #repair-this > .strip{
+        position: absolute;
+        background: transparent;
+        overflow: scroll;
+        top: 0;
+        width: 5%;
+        height: 100%;
+        padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+        box-sizing: content-box; /* So the width will be 100% + 17px */
+      }
+
+      #repair-this > .strip > .image-wrapper{
+        position: relative;
+        background: black;
+        height: 150%;
+        width: 100%;
+      }
+
+      #repair-this > .strip > .image-wrapper > .image{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 25%;
+        background:magenta;
+        background: url(assets/repair_b.svg);
+      }
     </style>
   </head>
 
@@ -80,6 +116,38 @@
     </svg>
     {% if page.ref == 'index' %}
     <img src="assets/repair_b.svg" style='max-height:70%'/>
+
+    <div id="repair-this">
+      <div class="strip" style="left:0%">
+        <div class="image-wrapper" style="top:20%">
+          <div class="image"></div>
+        </div>
+      </div>
+      <div class="strip" style="left:5%">
+        <div class="image-wrapper" style="top:27%">
+          <div class="image" style="background-position-x: -5%"></div>
+        </div>
+      </div>
+      <div class="strip" style="left:10%"></div>
+      <div class="strip" style="left:15%"></div>
+      <div class="strip" style="left:20%"></div>
+      <div class="strip" style="left:25%"></div>
+      <div class="strip" style="left:30%"></div>
+      <div class="strip" style="left:35%"></div>
+      <div class="strip" style="left:40%"></div>
+      <div class="strip" style="left:45%"></div>
+      <div class="strip" style="left:50%"></div>
+      <div class="strip" style="left:55%"></div>
+      <div class="strip" style="left:60%"></div>
+      <div class="strip" style="left:65%"></div>
+      <div class="strip" style="left:70%"></div>
+      <div class="strip" style="left:75%"></div>
+      <div class="strip" style="left:80%"></div>
+      <div class="strip" style="left:85%"></div>
+      <div class="strip" style="left:90%"></div>
+      <div class="strip" style="left:95%"></div>
+    </div>
+
     {% endif %}
 
     <div class="content">
@@ -102,6 +170,7 @@
     </div>
       <!-- eof fluid container -->
       {% include footer.html %}
-
+    <script>
+    </script>
   </body>
 </html>
