@@ -1,6 +1,9 @@
 ---
 lang: de
 title: Thomas Hoppenheit
+layout: post
+cover:
+  src: "https://www.c2dh.uni.lu/sites/default/files/styles/profile_picture_big/public/pictures/picture-377-1572860284.jpg?itok=8SqdM0HB"
 ---
 
 **Thomas Hoppenheit** is a PhD Candidate at the Luxembourg Centre for Contemporary and Digital History (C2DH). Within the FNR funded project “Repairing technology – fixing society? History of maintenance and repair in Luxembourg (1918 – 1990)” he is researching the development of urban repair networks in the city of Luxembourg and Esch-sur-Alzette.
