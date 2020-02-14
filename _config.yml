@@ -20,4 +20,8 @@ default_lang: en
 languages:
   - en
   - de
+collections:
+  authors:
+    output: true
+    permalink: /a/:slug/
 permalink: "/:year/:month/:day/:title:output_ext"
