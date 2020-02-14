@@ -1,9 +1,12 @@
 ---
 lang: de
 title: Rebecca Mossop
+layout: post
+cover:
+  src: "https://www.c2dh.uni.lu/sites/default/files/styles/profile_picture_big/public/pictures/picture-385-1572860159.jpg?itok=lVi7sjVw"
 ---
 
-**Rebecca Mossop** is a doctoral researcher at the [C2DH](https://c2dh.uni.lu) specializing on the infrastructures of repair: “maintaining the telephone system in Luxembourg".
+[DE version] **Rebecca Mossop** is a doctoral researcher at the [C2DH](https://c2dh.uni.lu) specializing on the infrastructures of repair: “maintaining the telephone system in Luxembourg".
 
 <!-- more -->
 
